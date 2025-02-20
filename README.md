@@ -1,0 +1,64 @@
+# Weather CLI
+
+A simple command-line weather application that shows current weather conditions for your location or a specified ZIP code. The application uses free, no-registration-required APIs for all functionality.
+
+## Features
+
+- Get current weather conditions for your location
+- Look up weather by ZIP code
+- Show city and state for your current location
+- Look up city and state by ZIP code
+
+## Installation
+
+1. Clone this repository
+2. Install the package:
+```bash
+pip install -e .
+```
+
+## Usage
+
+### Get weather for current location
+```bash
+weather current
+```
+
+### Get weather for a specific ZIP code
+```bash
+weather current --zipcode 94105
+```
+
+### Show your current location
+```bash
+weather where-is
+```
+
+### Show location for a ZIP code
+```bash
+weather where-is --zipcode 94105
+```
+
+## APIs Used
+
+- IP Geolocation: ip-api.com
+- ZIP Code Lookup: zippopotam.us
+- Weather Data: wttr.in
+
+## Development
+
+### Setup Development Environment
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+### Running Tests
+```bash
+pytest tests/
+```
+
+## License
+
+MIT License
