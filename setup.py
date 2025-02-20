@@ -9,7 +9,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 setup(
     name="py_weather_2",
     version="2.0.0",
-    author="Weather CLI Contributors",
+    author="Assaf Stone",
     author_email="your.email@example.com",
     description="A CLI weather application using free APIs",
     long_description=long_description,
@@ -24,7 +24,7 @@ setup(
         "uvicorn>=0.22.0",
         "jinja2>=3.1.2",
     ],
-    python_requires=">=3.8",  # Updated to match our CI matrix
+    python_requires=">=3.8",
     entry_points={
         "console_scripts": [
             "weather=py_weather_2.cli.main:cli",
@@ -48,5 +48,6 @@ setup(
     project_urls={
         "Bug Reports": "https://github.com/devopsjester/py-weather-2/issues",
         "Source": "https://github.com/devopsjester/py-weather-2",
+        "Download": "https://github.com/devopsjester/py-weather-2/releases",
     },
 )
