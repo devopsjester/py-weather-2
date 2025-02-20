@@ -70,6 +70,28 @@ pip install -r requirements.txt
 pytest tests/
 ```
 
+### Release Process
+To create a new release:
+1. Update version in `setup.py`
+2. Commit your changes
+3. Tag the release:
+```bash
+git tag -a v0.1.0 -m "Release version 0.1.0"
+git push origin v0.1.0
+```
+The GitHub Actions workflow will automatically:
+- Run all tests
+- Build the package
+- Create a GitHub Release
+- Attach build artifacts to the release
+
+### Build from Source
+To build the package locally:
+```bash
+python -m build
+```
+This will create distribution files in the `dist/` directory.
+
 ## License
 
 MIT License
