@@ -45,14 +45,16 @@ def current(zipcode):
         else location_service.get_current_location()
     )
 
-    if location:
-        weather = weather_service.get_weather(location.lat, location.lon)
-        if weather:
-            location_text = f"in {location.city}, {location.state}"
-            click.echo(
-                f"It is currently {weather.temp_f}ºF, and {weather.description.lower()} {location_text}"
-            )
-        else:
-            click.echo("Could not retrieve weather data")
-    else:
+    if not location:
         click.echo("Could not determine location")
+        return
+
+    weather = weather_service.get_weather(location.lat, location.lon)
+    if weather:
+        msg = (
+            f"It is currently {weather.temp_f}ºF, "
+            f"and {weather.description.lower()} in {location.city}, {location.state}"
+        )
+        click.echo(msg)
+    else:
+        click.echo("Could not retrieve weather data")

@@ -21,7 +21,11 @@ def create_app() -> FastAPI:
 
     # Mount static files if the directory exists
     if static_dir.exists():
-        app.mount("/static", StaticFiles(directory=str(static_dir)), name="static")
+        app.mount(
+            "/static",
+            StaticFiles(directory=str(static_dir)),
+            name="static",
+        )
 
     # Register routes
     app.include_router(location.router, prefix="/location", tags=["location"])

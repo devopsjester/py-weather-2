@@ -30,7 +30,7 @@ jobs:
       run: isort --check-only --diff .
       
     - name: Lint with flake8
-      run: flake8 . --count --max-line-length=120 --statistics
+      run: flake8 . --count --max-line-length=120 --statistics --exclude venv
 
   test:
     runs-on: ubuntu-latest

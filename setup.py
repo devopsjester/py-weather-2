@@ -1,5 +1,6 @@
 """
-Weather CLI - A simple weather application that shows current weather conditions
+Weather CLI - A simple weather application
+that shows current weather conditions
 """
 
 from setuptools import find_packages, setup

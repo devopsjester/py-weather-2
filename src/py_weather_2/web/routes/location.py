@@ -1,17 +1,20 @@
-"""Location routes."""
+"""Location routes for the web interface."""
 
 from pathlib import Path
 
 from fastapi import APIRouter, HTTPException, Request
+from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 
 from src.py_weather_2.core import LocationService
 
 router = APIRouter()
-templates = Jinja2Templates(directory=str(Path(__file__).parent.parent / "templates"))
+templates = Jinja2Templates(
+    directory=str(Path(__file__).parent.parent / "templates")
+)
 
 
-@router.get("/")
+@router.get("/", response_class=HTMLResponse)
 async def get_current_location(request: Request):
     """Get current location based on IP."""
     location_service = LocationService()
@@ -21,7 +24,8 @@ async def get_current_location(request: Request):
         raise HTTPException(status_code=404, detail="Location not found")
 
     return templates.TemplateResponse(
-        "location.html", {"request": request, "location": location}
+        "location.html",
+        {"request": request, "location": location},
     )
 
 

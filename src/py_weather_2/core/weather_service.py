@@ -12,7 +12,8 @@ class WeatherService:
     def get_weather(lat: float, lon: float) -> Optional[WeatherData]:
         """Get weather data from wttr.in"""
         try:
-            response = requests.get(f"https://wttr.in/{lat},{lon}?format=j1")
+            url = f"https://wttr.in/{lat},{lon}?format=j1"
+            response = requests.get(url)
             if response.status_code == 200:
                 data = response.json()
                 current = data.get("current_condition", [{}])[0]

@@ -2,17 +2,7 @@
 
 from unittest.mock import Mock, patch
 
-import pytest
-
 from py_weather_2.core.location_service import LocationService
-from py_weather_2.core.models import Location
-
-
-@pytest.fixture
-def mock_location():
-    return Location(
-        city="San Francisco", state="CA", zip="94105", lat=37.7749, lon=-122.4194
-    )
 
 
 class TestLocationService:
