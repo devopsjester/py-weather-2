@@ -47,7 +47,18 @@ weather where-is --zipcode 94105
 
 ## Development
 
-### Setup Development Environment
+### GitHub Codespaces
+This repository is configured for GitHub Codespaces. To get started:
+1. Click the "Code" button on GitHub
+2. Select "Create codespace on main"
+3. Wait for the environment to build - all dependencies will be automatically installed
+4. Start developing! The environment includes:
+   - Python 3.12
+   - Key VS Code extensions for Python development
+   - Automatic code formatting with Black
+   - Type checking and linting support
+
+### Local Development
 ```bash
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
