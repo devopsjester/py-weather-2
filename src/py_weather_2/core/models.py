@@ -1,5 +1,7 @@
 """Core data models."""
+
 from dataclasses import dataclass
+
 
 @dataclass
 class Location:
@@ -8,6 +10,7 @@ class Location:
     zip: str
     lat: float
     lon: float
+
 
 @dataclass
 class WeatherData:
