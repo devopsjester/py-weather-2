@@ -2,8 +2,8 @@
 
 import click
 
-from py_weather_2.core.location_service import LocationService
-from py_weather_2.core.weather_service import WeatherService
+from weather2.core.location_service import LocationService
+from weather2.core.weather_service import WeatherService
 
 
 @click.group()

@@ -4,7 +4,7 @@ from unittest.mock import Mock, patch
 
 import requests
 
-from py_weather_2.core.weather_service import WeatherService
+from weather2.core.weather_service import WeatherService
 
 
 class TestWeatherService:

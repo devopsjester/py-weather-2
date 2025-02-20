@@ -3,7 +3,7 @@ requires = ["setuptools>=45", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "py_weather_2"
+name = "weather2"
 version = "2.0.0"
 description = "A Python CLI and web app for weather information"
 readme = "README.md"
@@ -19,8 +19,8 @@ dynamic = ["dependencies", "classifiers"]
 "Source" = "https://github.com/devopsjester/py-weather-2"
 
 [project.scripts]
-weather = "py_weather_2.cli.main:cli"
-weather-web = "py_weather_2.web.app:run_server"
+weather = "weather2.cli.main:cli"
+weather-web = "weather2.web.app:run_server"
 
 [tool.setuptools]
 package-dir = {"" = "src"}

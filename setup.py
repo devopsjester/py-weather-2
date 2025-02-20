@@ -9,7 +9,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setup(
-    name="py_weather_2",
+    name="weather2",
     version="2.0.0",
     author="Assaf Stone",
     author_email="your.email@example.com",
@@ -29,7 +29,7 @@ setup(
     python_requires=">=3.8",
     entry_points={
         "console_scripts": [
-            "weather=py_weather_2.cli.main:cli",
+            "weather=weather2.cli.main:cli",
         ],
     },
     classifiers=[

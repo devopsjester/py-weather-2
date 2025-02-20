@@ -2,7 +2,7 @@
 
 from unittest.mock import Mock, patch
 
-from py_weather_2.core.location_service import LocationService
+from weather2.core.location_service import LocationService
 
 
 class TestLocationService:

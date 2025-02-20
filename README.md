@@ -47,7 +47,7 @@ weather where-is --zipcode 94105
 
 Start the web server:
 ```bash
-python3 -m uvicorn src.py_weather_2.web.app:app --reload
+python3 -m uvicorn src.weather2.web.app:app --reload
 ```
 
 Then open http://localhost:8000 in your browser.
@@ -114,7 +114,7 @@ py-weather-2/
 
 ### Running Tests
 ```bash
-pytest tests/
+python3 -m pytest tests/
 ```
 
 ### Release Process

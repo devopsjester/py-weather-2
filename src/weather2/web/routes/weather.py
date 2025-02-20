@@ -6,7 +6,7 @@ from fastapi import APIRouter, HTTPException, Request
 from fastapi.templating import Jinja2Templates
 from starlette.responses import HTMLResponse
 
-from src.py_weather_2.core import LocationService, WeatherService
+from weather2.core import LocationService, WeatherService
 
 router = APIRouter()
 templates = Jinja2Templates(directory=str(Path(__file__).parent.parent / "templates"))
