@@ -8,7 +8,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="py_weather_2",
-    version="0.1.0",
+    version="2.0.0",
     author="Weather CLI Contributors",
     author_email="your.email@example.com",
     description="A CLI weather application using free APIs",
