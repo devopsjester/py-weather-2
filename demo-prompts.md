@@ -58,3 +58,12 @@ Add a GitHub Actions CI build
 ```
 Ensure that the project name is a valid PEP 508 identifier (only alphanumeric characters, underscores, and hyphens are allowed, and it must start with a letter or underscore).
 ```
+
+```
+run the build command to verify that the TOML file creates a package correctly
+```
+
+This might be needed, depending on how Copilot configures virtual environments
+```
+instead of "pip install", you need to run "python3 -m pip install"
+```
