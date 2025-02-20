@@ -63,6 +63,11 @@ Ensure that the project name is a valid PEP 508 identifier (only alphanumeric ch
 run the build command to verify that the TOML file creates a package correctly
 ```
 
+```
+Create release 2.0.0
+```
+
+### Notes
 This might be needed, depending on how Copilot configures virtual environments
 ```
 instead of "pip install", you need to run "python3 -m pip install"
