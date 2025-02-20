@@ -1,4 +1,4 @@
-"""Constants used throughout the weather application."""
+"""Constants used throughout the core module."""
 
 STATE_ABBREV = {
     'Alabama': 'AL', 'Alaska': 'AK', 'Arizona': 'AZ', 'Arkansas': 'AR', 'California': 'CA',

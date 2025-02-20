@@ -1,4 +1,4 @@
-"""Service for handling location-related operations."""
+"""Location service functionality."""
 import requests
 from typing import Optional
 from .models import Location

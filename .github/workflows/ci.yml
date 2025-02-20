@@ -28,7 +28,7 @@ jobs:
         
     - name: Run tests
       run: |
-        python -m pytest tests/ -v
+        python3 -m pytest tests/ -v
 
   build-and-publish:
     needs: test
@@ -49,7 +49,7 @@ jobs:
         python3 -m pip install build twine
         
     - name: Build package
-      run: python -m build
+      run: python3 -m build
       
     - name: Create GitHub Release
       uses: softprops/action-gh-release@v1

@@ -1,6 +1,5 @@
-"""Data models for the weather application."""
+"""Core data models."""
 from dataclasses import dataclass
-from typing import Optional
 
 @dataclass
 class Location:

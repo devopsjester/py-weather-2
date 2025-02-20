@@ -1,8 +1,8 @@
 """Tests for location service."""
 import pytest
 from unittest.mock import patch, Mock
-from weather_app.location_service import LocationService
-from weather_app.models import Location
+from py_weather_2.core.location_service import LocationService
+from py_weather_2.core.models import Location
 
 @pytest.fixture
 def mock_location():

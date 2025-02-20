@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block title %}Weather App - Home{% endblock %}
+
+{% block content %}
+<div class="max-w-2xl mx-auto">
+    <h1 class="text-3xl font-bold mb-8">Weather Information</h1>
+    
+    <div class="grid gap-6">
+        <div class="bg-white p-6 rounded-lg shadow">
+            <h2 class="text-xl font-semibold mb-4">Current Location</h2>
+            <div class="grid gap-4">
+                <a href="/location" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+                    Show My Location
+                </a>
+                <a href="/weather" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+                    Show Weather at My Location
+                </a>
+            </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow">
+            <h2 class="text-xl font-semibold mb-4">Search by ZIP Code</h2>
+            <form id="zipForm" class="grid gap-4">
+                <input type="text" id="zipcode" name="zipcode" 
+                       placeholder="Enter ZIP code" 
+                       class="border p-2 rounded"
+                       pattern="[0-9]{5}" 
+                       required>
+                <div class="grid grid-cols-2 gap-4">
+                    <button type="button" onclick="showLocation()" 
+                            class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">
+                        Show Location
+                    </button>
+                    <button type="button" onclick="showWeather()" 
+                            class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">
+                        Show Weather
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+function showLocation() {
+    const zipcode = document.getElementById('zipcode').value;
+    if (zipcode) {
+        window.location.href = `/location/${zipcode}`;
+    }
+}
+
+function showWeather() {
+    const zipcode = document.getElementById('zipcode').value;
+    if (zipcode) {
+        window.location.href = `/weather/${zipcode}`;
+    }
+}
+</script>
+{% endblock %}

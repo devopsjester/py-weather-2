@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block title %}Weather App - Location{% endblock %}
+
+{% block content %}
+<div class="max-w-2xl mx-auto">
+    <div class="bg-white p-6 rounded-lg shadow">
+        <h1 class="text-3xl font-bold mb-4">Location Information</h1>
+        
+        <div class="grid gap-4">
+            <div class="grid grid-cols-2">
+                <span class="font-semibold">City:</span>
+                <span>{{ location.city }}</span>
+            </div>
+            <div class="grid grid-cols-2">
+                <span class="font-semibold">State:</span>
+                <span>{{ location.state }}</span>
+            </div>
+            {% if location.zip %}
+            <div class="grid grid-cols-2">
+                <span class="font-semibold">ZIP Code:</span>
+                <span>{{ location.zip }}</span>
+            </div>
+            {% endif %}
+            <div class="grid grid-cols-2">
+                <span class="font-semibold">Coordinates:</span>
+                <span>{{ location.lat }}, {{ location.lon }}</span>
+            </div>
+        </div>
+
+        <div class="mt-6 grid gap-4">
+            <a href="/weather{% if location.zip %}/{{ location.zip }}{% endif %}" 
+               class="bg-blue-600 text-white px-4 py-2 rounded text-center hover:bg-blue-700">
+                Show Weather
+            </a>
+            <a href="/" class="bg-gray-600 text-white px-4 py-2 rounded text-center hover:bg-gray-700">
+                Back to Home
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -15,7 +15,8 @@ setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/devopsjester/py-weather-2",
-    packages=find_packages(),
+    packages=find_packages(where="src"),
+    package_dir={"": "src"},
     install_requires=[
         "click>=8.0.0",
         "requests>=2.0.0",
@@ -23,7 +24,7 @@ setup(
     python_requires=">=3.8",  # Updated to match our CI matrix
     entry_points={
         "console_scripts": [
-            "weather=weather:cli",
+            "weather=py_weather_2.cli.main:cli",
         ],
     },
     classifiers=[

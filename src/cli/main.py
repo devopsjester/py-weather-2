@@ -1,8 +1,7 @@
-#!/usr/bin/env python3
-"""Weather CLI module."""
+"""CLI interface module."""
 import click
-from .location_service import LocationService
-from .weather_service import WeatherService
+from py_weather_2.core.location_service import LocationService
+from py_weather_2.core.weather_service import WeatherService
 
 @click.group()
 def cli():
@@ -42,6 +41,3 @@ def current(zipcode):
             click.echo("Could not retrieve weather data")
     else:
         click.echo("Could not determine location")
-
-if __name__ == '__main__':
-    cli()
