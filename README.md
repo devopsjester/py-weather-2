@@ -14,7 +14,7 @@ A simple command-line weather application that shows current weather conditions 
 1. Clone this repository
 2. Install the package:
 ```bash
-pip install -e .
+python3 -m pip install -e .
 ```
 
 ## Usage
@@ -62,7 +62,7 @@ This repository is configured for GitHub Codespaces. To get started:
 ```bash
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
-pip install -r requirements.txt
+python3 -m pip install -r requirements.txt
 ```
 
 ### Running Tests
