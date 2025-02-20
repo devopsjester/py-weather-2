@@ -15,22 +15,42 @@ The first command, “where-is” will show the city and state. If a zip code is
 The second command, “current" will show the current temperature (in imperial units) and weather conditions. if a "--zipcode" argument is provided it will show the conditions for that zipcode, otherwise use current location. Output should be like “It is currently <temperature>ºF, and <weather condition> in <city>, <state>.”
 ```
 
-```run the where-is command```
+```
+run the where-is command
+```
 
-```make the weather conditions lower case, and use the state abbreviation instead of the full name.```
+```
+make the weather conditions lower case, and use the state abbreviation instead of the full name.
+```
 
-```run all commands```
+```
+run all commands
+```
 
-```restructure this project according to SOLID principles.```
+```
+restructure this project according to SOLID principles.
+```
 
-```add unit tests for both commands```
+```
+add unit tests for both commands
+```
 
-```fix failing test```
+```
+fix failing test
+```
 
-```Add a gitignore file```
+```
+Add a gitignore file
+```
 
-```Add a setup script and readme file```
+```
+Add a setup script and readme file
+```
 
-```Add a codespace configuration ```
+```
+Add a codespace configuration
+```
 
-```Add a GitHub Actions CI build```
+```
+Add a GitHub Actions CI build
+```
