@@ -9,9 +9,7 @@ from fastapi.templating import Jinja2Templates
 from src.py_weather_2.core import LocationService
 
 router = APIRouter()
-templates = Jinja2Templates(
-    directory=str(Path(__file__).parent.parent / "templates")
-)
+templates = Jinja2Templates(directory=str(Path(__file__).parent.parent / "templates"))
 
 
 @router.get("/", response_class=HTMLResponse)

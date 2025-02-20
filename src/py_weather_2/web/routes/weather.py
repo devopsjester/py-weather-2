@@ -9,9 +9,7 @@ from starlette.responses import HTMLResponse
 from src.py_weather_2.core import LocationService, WeatherService
 
 router = APIRouter()
-templates = Jinja2Templates(
-    directory=str(Path(__file__).parent.parent / "templates")
-)
+templates = Jinja2Templates(directory=str(Path(__file__).parent.parent / "templates"))
 
 
 @router.get("/", response_class=HTMLResponse)

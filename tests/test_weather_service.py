@@ -14,9 +14,7 @@ class TestWeatherService:
         mock_response = Mock()
         mock_response.status_code = 200
         mock_response.json.return_value = {
-            "current_condition": [
-                {"temp_F": "72", "weatherDesc": [{"value": "Sunny"}]}
-            ]
+            "current_condition": [{"temp_F": "72", "weatherDesc": [{"value": "Sunny"}]}]
         }
         mock_get.return_value = mock_response
 
@@ -24,9 +22,7 @@ class TestWeatherService:
         weather = WeatherService.get_weather(37.7749, -122.4194)
 
         # Verify the correct URL was called
-        mock_get.assert_called_once_with(
-            "https://wttr.in/37.7749,-122.4194?format=j1"
-        )
+        mock_get.assert_called_once_with("https://wttr.in/37.7749,-122.4194?format=j1")
 
         # Verify the response parsing
         assert weather is not None
