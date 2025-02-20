@@ -1,4 +1,4 @@
-# Weather CLI
+# PY Weather 2
 
 A simple command-line weather application that shows current weather conditions for your location or a specified ZIP code. The application uses free, no-registration-required APIs for all functionality.
 

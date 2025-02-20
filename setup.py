@@ -7,14 +7,14 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setup(
-    name="weather-cli",
+    name="py_weather_2",
     version="0.1.0",
     author="Weather CLI Contributors",
     author_email="your.email@example.com",
     description="A CLI weather application using free APIs",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/yourusername/weather-cli",
+    url="https://github.com/devopsjester/py-weather-2",
     packages=find_packages(),
     install_requires=[
         "click>=8.0.0",
@@ -42,7 +42,7 @@ setup(
         "Topic :: Scientific/Engineering :: Atmospheric Science",
     ],
     project_urls={
-        "Bug Reports": "https://github.com/yourusername/weather-cli/issues",
-        "Source": "https://github.com/yourusername/weather-cli",
+        "Bug Reports": "https://github.com/devopsjester/py-weather-2/issues",
+        "Source": "https://github.com/devopsjester/py-weather-2",
     },
 )
