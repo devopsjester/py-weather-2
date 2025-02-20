@@ -47,10 +47,12 @@ weather where-is --zipcode 94105
 
 Start the web server:
 ```bash
-weather-web
+python3 -m uvicorn src.py_weather_2.web.app:app --reload
 ```
 
 Then open http://localhost:8000 in your browser.
+
+The `--reload` flag enables auto-reload during development. For production, remove the `--reload` flag.
 
 ### API Endpoints
 

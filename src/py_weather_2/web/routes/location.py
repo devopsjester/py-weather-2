@@ -2,7 +2,7 @@
 from fastapi import APIRouter, Request, HTTPException
 from fastapi.templating import Jinja2Templates
 from pathlib import Path
-from src.core import LocationService
+from src.py_weather_2.core import LocationService
 
 router = APIRouter()
 templates = Jinja2Templates(directory=str(Path(__file__).parent.parent / "templates"))

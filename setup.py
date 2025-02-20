@@ -20,6 +20,9 @@ setup(
     install_requires=[
         "click>=8.0.0",
         "requests>=2.0.0",
+        "fastapi>=0.100.0",
+        "uvicorn>=0.22.0",
+        "jinja2>=3.1.2",
     ],
     python_requires=">=3.8",  # Updated to match our CI matrix
     entry_points={
