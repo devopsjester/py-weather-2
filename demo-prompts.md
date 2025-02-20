@@ -54,3 +54,7 @@ Add a codespace configuration
 ```
 Add a GitHub Actions CI build
 ```
+
+```
+Ensure that the project name is a valid PEP 508 identifier (only alphanumeric characters, underscores, and hyphens are allowed, and it must start with a letter or underscore).
+```
