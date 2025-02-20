@@ -1,17 +1,16 @@
-[build-system]
-requires = ["setuptools>=45", "wheel"]
-build-backend = "setuptools.build_meta"
-
 [project]
-name = "weather-cli"
-dynamic = ["version", "dependencies"]
+name = "PY Weather 2"
+version = "0.1.0"
+description = "A Python CLI weather app"
+readme = "README.md"
+requires-python = ">=3.6"
+license = { file = "LICENSE" }
+dependencies = ["requests"]
 
-[tool.black]
-line-length = 88
-target-version = ['py38']
-include = '\.pyi?$'
+# Add this section to declare dynamic fields
+dynamic = ["urls", "classifiers", "scripts"]
 
-[tool.pytest.ini_options]
-testpaths = ["tests"]
-python_files = ["test_*.py"]
-addopts = "-v --tb=short"
+# Define the necessary fields
+urls = { "Bug Reports" = "https://github.com/devopsjester/py-weather-2/issues", "Source" = "https://github.com/devopsjester/py-weather-2" }
+classifiers = ["Programming Language :: Python :: 3", "License :: OSI Approved :: MIT License", "Operating System :: OS Independent"]
+scripts = { "weather" = "weather:cli" }
