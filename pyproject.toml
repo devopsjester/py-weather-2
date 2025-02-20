@@ -15,6 +15,7 @@ dependencies = ["requests"]
 dynamic = ["urls", "classifiers", "scripts"]
 
 # Define the necessary fields
+[tool.setuptools.dynamic]
 urls = { "Bug Reports" = "https://github.com/devopsjester/py-weather-2/issues", "Source" = "https://github.com/devopsjester/py-weather-2" }
 classifiers = ["Programming Language :: Python :: 3", "License :: OSI Approved :: MIT License", "Operating System :: OS Independent"]
 scripts = { "weather" = "weather:cli" }
