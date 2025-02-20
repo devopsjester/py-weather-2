@@ -83,7 +83,7 @@ class TestCliCommands:
         mock_get_weather.return_value = mock_weather
         result = runner.invoke(cli, ["current"])
         assert result.exit_code == 0
-        expected = "It is currently 72.0ºF, and Sunny in San Francisco, CA"
+        expected = "It is currently 72.0ºF, and sunny in San Francisco, CA"
         assert expected in result.output
 
     @patch(
@@ -102,7 +102,7 @@ class TestCliCommands:
         mock_get_weather.return_value = mock_weather
         result = runner.invoke(cli, ["current", "--zipcode", "94105"])
         assert result.exit_code == 0
-        expected = "It is currently 72.0ºF, and Sunny in San Francisco, CA"
+        expected = "It is currently 72.0ºF, and sunny in San Francisco, CA"
         assert expected in result.output
 
     @patch(
