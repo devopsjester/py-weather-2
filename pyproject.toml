@@ -19,7 +19,7 @@ dynamic = ["dependencies", "classifiers"]
 "Source" = "https://github.com/devopsjester/py-weather-2"
 
 [project.scripts]
-weather = "weather:cli"
+weather = "weather_app.cli:cli"
 
 [tool.setuptools.dynamic]
 dependencies = {file = ["requirements.in"]}
