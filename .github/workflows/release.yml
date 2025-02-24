@@ -23,7 +23,7 @@ jobs:
     - name: Install build dependencies
       run: |
         python3 -m pip install --upgrade pip
-        python3 -m pip install build twine
+        python3 -m pip install build
         
     - name: Build package
       run: python3 -m build
@@ -37,9 +37,3 @@ jobs:
         generate_release_notes: true
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-    - name: Publish to GitHub Packages
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: |
-        python3 -m twine upload --repository-url https://upload.pypi.org/legacy/ dist/*
